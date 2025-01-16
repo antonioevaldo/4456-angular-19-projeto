@@ -1,0 +1,23 @@
+.apresentacao {
+  border-radius: 0.5rem;
+  background: var(--gradiente-azul);
+
+  display: flex;
+  padding: 3rem 2.5rem;
+  justify-content: space-between;
+}
+
+.boas-vindas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.boas-vindas__data {
+  font-size: 0.8125rem;
+}
+
+.boas-vindas__titulo {
+  font-size: 1.9375rem;
+  font-weight: 600;
+}

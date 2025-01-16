@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ApresentacaoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = '4456-angular-19-projeto';
-}
+export class AppComponent {}
