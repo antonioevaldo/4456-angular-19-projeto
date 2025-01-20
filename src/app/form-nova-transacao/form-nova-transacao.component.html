@@ -6,7 +6,7 @@
       <label class="form__grupo">
         Transação
         <div class="form__select-wrapper">
-          <select class="form__campo form__campo--select-tipo-transacao" name="tipo-transacao" value="" required>
+          <select [(ngModel)]="novaTransacao.tipo" class="form__campo form__campo--select-tipo-transacao" name="tipo-transacao" required>
             <option value="" selected disabled>Selecione o tipo de transação</option>
             <option value="deposito">Depósito</option>
             <option value="saque">Saque</option>
@@ -17,9 +17,8 @@
       <label class="form__grupo">
         Valor
         <div class="form__input-wrapper">
-          <input [(ngModel)]="tipoTransacao" class="form__campo form__campo--valor-transacao" type="number" min="0" name="valor" placeholder="00,00" required>
+          <input [(ngModel)]="novaTransacao.valor" class="form__campo form__campo--valor-transacao" type="number" min="0" name="valor" placeholder="00,00" required>
         </div>
-        {{ tipoTransacao }}
       </label>
     </div>
 
