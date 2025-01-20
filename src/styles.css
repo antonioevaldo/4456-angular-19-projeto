@@ -12,7 +12,10 @@
   --azul-destaques: #90DDFF;
   --azul-hover: #5CC0ED;
   --azul-pressionado: #30A7DC;
+
   --gradiente-azul: linear-gradient(180deg, #FFF 0%, #6BD1FF 100%);
+  --fundo-azul-claro: #F2FBFF;
+  --fundo-cinza-claro: #F5F5F5;
 }
 
 html, body {
@@ -22,5 +25,14 @@ html, body {
   font-style: normal;
   min-height: 100vh;
   color: var(--preto);
+}
+
+button, select, input, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  border: 0;
 }
 
