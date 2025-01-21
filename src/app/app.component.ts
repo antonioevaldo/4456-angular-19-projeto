@@ -10,4 +10,8 @@ import { FormNovaTransacaoComponent } from "./form-nova-transacao/form-nova-tran
 })
 export class AppComponent {
   saldo = 3000;
+
+  processarTransacao() {
+    console.log('Transação criada!')
+  }
 }
