@@ -1,5 +1,5 @@
 <main class="form-wrapper">
-  <form (ngSubmit)="aoSubmeter()" class="form">
+  <form (ngSubmit)="aoSubmeter()" class="form" ngNativeValidate>
     <h2 class="form__titulo">Nova transação</h2>
 
     <div class="form__campos">
@@ -17,7 +17,7 @@
       <label class="form__grupo">
         Valor
         <div class="form__input-wrapper">
-          <input [(ngModel)]="novaTransacao.valor" class="form__campo form__campo--valor-transacao" type="number" min="0" name="valor" placeholder="00,00" required>
+          <input [(ngModel)]="novaTransacao.valor" class="form__campo form__campo--valor-transacao" type="number" min="0.01" step="0.01" name="valor" placeholder="00,00" required>
         </div>
       </label>
     </div>
