@@ -15,7 +15,7 @@ export class FormNovaTransacaoComponent {
   transacaoCriada = output<Transacao>();
 
   aoSubmeter() {
-    const transacao = {
+    const transacao: Transacao = {
       tipo: this.tipoTransacao as Transacao["tipo"],
       valor: Number(this.valorTransacao)
     };
