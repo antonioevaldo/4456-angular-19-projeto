@@ -114,8 +114,3 @@
   align-items: center;
   gap: 0.625rem;
 }
-
-.form__botao-confirmar-transacao[disabled] {
-  opacity: 0.5;
-  cursor: initial;
-}
