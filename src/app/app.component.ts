@@ -8,4 +8,6 @@ import { FormNovaTransacaoComponent } from "./form-nova-transacao/form-nova-tran
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {}
+export class AppComponent {
+  saldo = 3000;
+}

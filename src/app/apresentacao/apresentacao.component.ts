@@ -1,5 +1,5 @@
 import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-apresentacao',
@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class ApresentacaoComponent {
   dataAtual = new Date();
+  saldo = input.required<number>();
 }
