@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
 import { FormNovaTransacaoComponent } from "./form-nova-transacao/form-nova-transacao.component";
+import { Transacao } from './types';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,9 @@ import { FormNovaTransacaoComponent } from "./form-nova-transacao/form-nova-tran
 export class AppComponent {
   saldo = 3000;
 
-  processarTransacao() {
-    console.log('Transação criada!')
+  processarTransacao(transacao: Transacao) {
+    if (transacao.tipo === "deposito") {
+      this.saldo += transacao.valor;
+    }
   }
 }
