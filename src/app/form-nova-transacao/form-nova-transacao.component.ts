@@ -1,6 +1,6 @@
 import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Transacao } from '../types';
+import { TipoTransacao, Transacao } from '../modelos/transacao';
 
 @Component({
   selector: 'app-form-nova-transacao',
@@ -15,10 +15,10 @@ export class FormNovaTransacaoComponent {
   transacaoCriada = output<Transacao>();
 
   aoSubmeter() {
-    const transacao: Transacao = {
-      tipo: this.tipoTransacao as Transacao["tipo"],
-      valor: Number(this.valorTransacao)
-    };
+    const transacao = new Transacao(
+      this.tipoTransacao as TipoTransacao,
+      Number(this.valorTransacao)
+    );
 
     this.transacaoCriada.emit(transacao);
   }
