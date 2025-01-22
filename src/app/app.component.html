@@ -1,7 +1,5 @@
 <div class="app">
-  <app-banner class="area1" />
+  <app-banner [saldo]="saldo()" class="area1" />
   <app-form-nova-transacao (transacaoCriada)="processarTransacao($event)" class="area2" />
   <div class="area3">extrato</div>
-
-  {{ saldo() }}
 </div>
