@@ -1,12 +1,12 @@
 <main class="form-wrapper">
   <form (ngSubmit)="aoSubmeter()" class="form" ngNativeValidate>
-    <h2 class="form__titulo">Nova transação</h2>
+    <h2 class="titulo">Nova transação</h2>
 
-    <div class="form__campos">
-      <label class="form__grupo">
+    <div class="campos">
+      <label class="campo-grupo">
         Transação
-        <div class="form__select-wrapper">
-          <select [(ngModel)]="tipoTransacao" class="form__campo form__campo--select-tipo-transacao" name="tipo-transacao" required>
+        <div class="select-wrapper">
+          <select [(ngModel)]="tipoTransacao" class="campo select-tipo-transacao" name="tipo-transacao" required>
             <option value="" selected disabled>Selecione o tipo de transação</option>
             <option value="deposito">Depósito</option>
             <option value="saque">Saque</option>
@@ -14,14 +14,14 @@
         </div>
       </label>
 
-      <label class="form__grupo">
+      <label class="campo-grupo">
         Valor
-        <div class="form__input-wrapper">
-          <input [(ngModel)]="valorTransacao" class="form__campo form__campo--valor-transacao" type="number" min="0.01" step="0.01" name="valor" placeholder="00,00" required>
+        <div class="input-wrapper">
+          <input [(ngModel)]="valorTransacao" class="campo input-valor-transacao" type="number" min="0.01" step="0.01" name="valor" placeholder="00,00" required>
         </div>
       </label>
     </div>
 
-    <button class="form__botao-confirmar-transacao">Confirmar transação</button>
+    <button class="botao-confirmar-transacao">Confirmar transação</button>
   </form>
 </main>
