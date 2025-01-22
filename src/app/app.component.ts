@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
+import { BannerComponent } from './banner/banner.component';
 import { FormNovaTransacaoComponent } from "./form-nova-transacao/form-nova-transacao.component";
 import { Transacao } from './types';
 
 @Component({
   selector: 'app-root',
-  imports: [ApresentacaoComponent, FormNovaTransacaoComponent],
+  imports: [BannerComponent, FormNovaTransacaoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

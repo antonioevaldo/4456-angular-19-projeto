@@ -2,12 +2,12 @@ import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-apresentacao',
+  selector: 'app-banner',
   imports: [DatePipe, TitleCasePipe, CurrencyPipe],
-  templateUrl: './apresentacao.component.html',
-  styleUrl: './apresentacao.component.css'
+  templateUrl: './banner.component.html',
+  styleUrl: './banner.component.css'
 })
-export class ApresentacaoComponent {
+export class BannerComponent {
   dataAtual = new Date();
   saldo = input.required<number>();
 }
