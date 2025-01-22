@@ -7,22 +7,6 @@
   justify-content: space-between;
 }
 
-.boas-vindas {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.boas-vindas__data {
-  font-size: 0.8125rem;
-}
-
-.boas-vindas__titulo {
-  font-size: 1.9375rem;
-  font-weight: 600;
-  line-height: 125%;
-}
-
 .saldo {
   display: flex;
   flex-direction: column;
