@@ -1,11 +1,11 @@
 export class Transacao {
   private static contador = 0;
 
-  id = Transacao.contador++;
+  readonly id = Transacao.contador++;
 
   constructor(
-    public tipo: TipoTransacao,
-    public valor: number
+    public readonly tipo: TipoTransacao,
+    public readonly valor: number
   ) { }
 }
 
