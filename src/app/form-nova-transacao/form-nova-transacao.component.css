@@ -46,10 +46,13 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+
+  transition: border .3s;
 }
 
 .campo:focus {
-  outline: 1px solid currentColor;
+  outline: none;
+  border: 2px solid var(--azul-pressionado);
 }
 
 .select-wrapper {
@@ -113,4 +116,14 @@
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
+
+  transition: background-color .3s;
+}
+
+.botao-confirmar-transacao:hover {
+  background: var(--azul-hover);
+}
+
+.botao-confirmar-transacao:focus {
+  background: var(--azul-pressionado);
 }
