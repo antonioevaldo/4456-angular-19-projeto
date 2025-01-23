@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Transacao } from '../modelos/transacao';
 
 @Component({
   selector: 'app-extrato',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './extrato.component.css'
 })
 export class ExtratoComponent {
-
+  transacoes = input.required<Transacao[]>();
 }
