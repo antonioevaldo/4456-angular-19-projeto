@@ -5,7 +5,7 @@
     @for (transacao of transacoes(); track transacao.id) {
       <li class="transacao">
         <span class="valor">
-          {{ transacao.valor | currency:'BRL' }}
+          {{ transacao.tipo === "saque" ? '-' : '' }}{{ transacao.valor | currency:'BRL' }}
         </span>
         <span class="data">
           {{ transacao.data | date:'dd/MM/yyyy' }}
