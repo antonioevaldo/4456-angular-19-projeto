@@ -5,6 +5,8 @@
     'area1 area1 area3'
     'area2 area2 area3';
   gap: 1.5rem;
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
 .area1 {
