@@ -4,10 +4,13 @@
   <ul class="transacoes">
     @for (transacao of transacoes(); track transacao.id) {
       <li class="transacao">
-        <span class="valor">{{ transacao.valor | currency:'BRL' }}</span>
-        <span class="data">23/11/2022</span>
+        <span class="valor">
+          {{ transacao.valor | currency:'BRL' }}
+        </span>
+        <span class="data">
+          {{ transacao.data | date:'dd/MM/yyyy' }}
+        </span>
       </li>
-      {{ transacao.id }}
     }
   </ul>
 </aside>

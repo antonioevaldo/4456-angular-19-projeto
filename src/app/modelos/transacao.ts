@@ -2,6 +2,7 @@ export class Transacao {
   private static contador = 0;
 
   readonly id = Transacao.contador++;
+  readonly data = new Date();
 
   constructor(
     public readonly tipo: TipoTransacao,
