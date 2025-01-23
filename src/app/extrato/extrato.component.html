@@ -11,6 +11,10 @@
           {{ transacao.data | date:'dd/MM/yyyy' }}
         </span>
       </li>
+    } @empty {
+      <li aria-hidden="true">
+        Ainda não há transações.
+      </li>
     }
   </ul>
 </aside>
