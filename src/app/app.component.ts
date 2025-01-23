@@ -14,13 +14,16 @@ export class AppComponent {
 
   saldo = computed(() => {
     return this.transacoes().reduce((acc, transacaoAtual) => {
-      if (transacaoAtual.tipo === TipoTransacao.DEPOSITO) {
-        return acc + transacaoAtual.valor;
-      } else if (transacaoAtual.tipo === TipoTransacao.SAQUE) {
-        return acc - transacaoAtual.valor;
-      }
+      switch (transacaoAtual.tipo) {
+        case TipoTransacao.DEPOSITO:
+          return acc + transacaoAtual.valor;
 
-      throw new Error('Tipo de transação não identificado.');
+        case TipoTransacao.SAQUE:
+          return acc - transacaoAtual.valor;
+
+        default:
+          throw new Error('Tipo de transação não identificado.');
+      }
     }, 0);
   });
 
