@@ -33,6 +33,6 @@ export class AppComponent {
       return alert('Saldo insuficiente!')
     }
 
-    this.transacoes.update((listaAtual) => [...listaAtual, transacao]);
+    this.transacoes.update((listaAtual) => [transacao, ...listaAtual]);
   }
 }
