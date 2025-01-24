@@ -1,7 +1,7 @@
-export class Transacao {
-  private static contador = 0;
+import { nanoid } from "nanoid";
 
-  readonly id = Transacao.contador++;
+export class Transacao {
+  readonly id = nanoid();
   readonly data = new Date();
 
   constructor(
