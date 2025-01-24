@@ -1,10 +1,10 @@
-import { CurrencyPipe, DatePipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { Transacao } from '../modelos/transacao';
+import { TransacaoComponent } from "./transacao/transacao.component";
 
 @Component({
   selector: 'app-extrato',
-  imports: [CurrencyPipe, DatePipe],
+  imports: [TransacaoComponent],
   templateUrl: './extrato.component.html',
   styleUrl: './extrato.component.css'
 })
