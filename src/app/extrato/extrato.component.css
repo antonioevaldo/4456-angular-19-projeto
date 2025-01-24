@@ -12,11 +12,11 @@
 .titulo {
   font-size: 1.5625rem;
   font-weight: 600;
-  line-height: 125%; 
+  line-height: 125%;
 }
 
-.transacoes {
+.meses {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 2.5rem;
 }

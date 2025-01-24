@@ -1,0 +1,16 @@
+.titulo {
+  margin-bottom: 0.5rem;
+
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.divisoria {
+  margin-bottom: 1rem;
+}
+
+.transacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

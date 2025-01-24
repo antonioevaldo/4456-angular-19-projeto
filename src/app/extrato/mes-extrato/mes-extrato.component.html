@@ -1,0 +1,17 @@
+<h3 class="titulo">
+  {{ transacoes()[0].data | date:'MMMM/yyyy' | titlecase }}
+</h3>
+
+<hr class="divisoria">
+
+<ul class="transacoes">
+  @for (transacao of transacoes(); track transacao.id) {
+    <li>
+      <app-transacao [transacao]="transacao" />
+    </li>
+  } @empty {
+    <li aria-hidden="true">
+      Ainda não há transações.
+    </li>
+  }
+</ul>
