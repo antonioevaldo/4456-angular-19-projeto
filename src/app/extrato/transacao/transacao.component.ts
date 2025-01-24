@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
-import { Transacao } from '../../modelos/transacao';
+import { Component, computed, input } from '@angular/core';
+import { TipoTransacao, Transacao } from '../../modelos/transacao';
 import { CurrencyPipe, DatePipe } from '@angular/common';
 
 @Component({
@@ -10,4 +10,12 @@ import { CurrencyPipe, DatePipe } from '@angular/common';
 })
 export class TransacaoComponent {
   transacao = input.required<Transacao>();
+
+  valor = computed(() => {
+    if (this.transacao().tipo === TipoTransacao.SAQUE) {
+      return -this.transacao().valor;
+    }
+
+    return this.transacao().valor;
+  });
 }

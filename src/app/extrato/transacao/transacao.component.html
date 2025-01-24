@@ -1,6 +1,6 @@
 <div class="transacao">
   <span class="valor">
-    {{ transacao().tipo === "saque" ? '-' : '' }}{{ transacao().valor | currency:'BRL' }}
+    {{ valor() | currency:'BRL' }}
   </span>
   <span class="data">
     {{ transacao().data | date:'dd/MM/yyyy' }}
