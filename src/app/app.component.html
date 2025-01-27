@@ -1,5 +1,7 @@
 <div class="app">
-  <app-banner [saldo]="saldo()" class="area1" />
-  <app-form-nova-transacao (transacaoCriada)="processarTransacao($event)" class="area2" />
-  <app-extrato [transacoes]="transacoes()" class="area3" />
+  <div class="banner-form-wrapper">
+    <app-banner [saldo]="saldo()" />
+    <app-form-nova-transacao (transacaoCriada)="processarTransacao($event)" />
+  </div>
+  <app-extrato [transacoes]="transacoes()" class="extrato" />
 </div>
