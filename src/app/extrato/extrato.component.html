@@ -2,7 +2,7 @@
   <h2 class="titulo">Extrato</h2>
   
   <ul class="meses">
-    @for (itemDoMapa of periodosTransacoes(); track itemDoMapa[0]) {
+    @for (itemDoMapa of transacoesPorPeriodo(); track itemDoMapa[0]) {
       <li>
         <app-mes-extrato [transacoes]="itemDoMapa[1]" />
       </li>

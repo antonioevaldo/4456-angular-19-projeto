@@ -11,19 +11,20 @@ import { MesExtratoComponent } from "./mes-extrato/mes-extrato.component";
 export class ExtratoComponent {
   transacoes = input.required<Transacao[]>();
 
-  periodosTransacoes = computed(() => {
-    const mapa = new Map<string, Transacao[]>();
+  transacoesPorPeriodo = computed(() => {
+    return this.transacoes().reduce((mapa, transacao) => {
+      const periodo = this.obtemPeriodo(transacao);
+      const transacoesDessePeriodo = mapa.get(periodo) ?? [];
 
-    this.transacoes().forEach((transacao) => {
-      const mesIndice = transacao.data.getMonth();
-      const ano = transacao.data.getFullYear();
-      const chaveDoMapa = `${mesIndice}/${ano}`;
+      mapa.set(periodo, [...transacoesDessePeriodo, transacao]);
 
-      const transacoesDessePeriodo = mapa.get(chaveDoMapa) ?? [];
-
-      mapa.set(chaveDoMapa, [...transacoesDessePeriodo, transacao]);
-    });
-
-    return mapa;
+      return mapa;
+    }, new Map<string, Transacao[]>());
   });
+
+  private obtemPeriodo(transacao: Transacao) {
+    const mesIndice = transacao.data.getMonth();
+    const ano = transacao.data.getFullYear();
+    return `${mesIndice}/${ano}`;
+  }
 }

@@ -25,18 +25,6 @@ export class AppComponent {
       data: new Date('2024-12-31T00:00')
     },
     {
-      id: '4',
-      tipo: TipoTransacao.SAQUE,
-      valor: 5,
-      data: new Date('2024-02-15T00:00')
-    },
-    {
-      id: '3',
-      tipo: TipoTransacao.SAQUE,
-      valor: 20,
-      data: new Date('2024-02-10T00:00')
-    },
-    {
       id: '2',
       tipo: TipoTransacao.SAQUE,
       valor: 10,
