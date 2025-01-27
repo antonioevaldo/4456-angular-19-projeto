@@ -1,11 +1,11 @@
 <h3 class="titulo">
-  {{ transacoes()[0].data | date:'MMMM yyyy' | titlecase }}
+  {{ periodoComTransacoes()[0] | titlecase }}
 </h3>
 
 <hr class="divisoria">
 
 <ul class="transacoes">
-  @for (transacao of transacoes(); track transacao.id) {
+  @for (transacao of periodoComTransacoes()[1]; track transacao.id) {
     <li>
       <app-transacao [transacao]="transacao" />
     </li>

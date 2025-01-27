@@ -4,7 +4,7 @@
   <ul class="meses">
     @for (itemDoMapa of transacoesPorPeriodo(); track itemDoMapa[0]) {
       <li>
-        <app-mes-extrato [transacoes]="itemDoMapa[1]" />
+        <app-mes-extrato [periodoComTransacoes]="itemDoMapa" />
       </li>
     }
   </ul>

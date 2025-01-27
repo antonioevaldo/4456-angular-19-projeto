@@ -23,8 +23,9 @@ export class ExtratoComponent {
   });
 
   private obtemPeriodo(transacao: Transacao) {
-    const mesIndice = transacao.data.getMonth();
+    const mes = transacao.data.toLocaleString('pt-BR', { month: 'long' })
     const ano = transacao.data.getFullYear();
-    return `${mesIndice}/${ano}`;
+
+    return `${mes}/${ano}`;
   }
 }
