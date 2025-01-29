@@ -6,6 +6,10 @@
       <li>
         <app-mes-extrato [periodoComTransacoes]="itemDoMapa" />
       </li>
+    } @empty {
+      <li aria-hidden="true">
+        Ainda não há transações.
+      </li>
     }
   </ul>
 </aside>
